@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "instant server",
+  "author": {
+    "name": "chaosannals",
+    "email": "chaosannals@outlook.com"
+  },
+  "scripts": {
+    "dev": "nodemon source/main.js",
+    "pro": "node source/main.js",
+    "init": "node source/script/initdb.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaosannals/nstant.git"
+  },
+  "keywords": [
+    "nstant"
+  ],
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "colors": "^1.4.0",
+    "crypto-js": "^4.0.0",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "koa": "^2.11.0",
+    "koa-route": "^3.2.0",
+    "koa-static": "^5.0.0",
+    "koa-websocket": "^6.0.0",
+    "nedb": "^1.8.0",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,29 @@
+.panel-area {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.output-area {
+    overflow-x: auto;
+    overflow-y: scroll;
+    width: 800px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 1px solid #0002;
+}
+
+.input-area {
+    width: 800px;
+    height: 200px;
+}
+.input-area textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 170px;
+    resize: none;
+    border: 1px solid #0002;
+}

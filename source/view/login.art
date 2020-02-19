@@ -1,0 +1,30 @@
+{{extend './layout.art'}}
+{{block 'title'}}登录{{/block}}
+
+{{block 'style'}}
+<link rel="stylesheet" type="text/css" href="/login.css" />
+{{/block}}
+
+{{block 'content'}}
+<div class="login page">
+    <div class="login-box">
+        <form action="/login/verify">
+            <div class="">
+                <label>账号：</label>
+                <input name="username"/>
+            </div>
+            <div class="">
+                <label>密码：</label>
+                <input name="password" type="password"/>
+            </div>
+            <div class="">
+                <button>提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+{{/block}}
+
+{{block 'script'}}
+<script type="text/javascript" src="/login.js" charset="utf-8"></script>
+{{/block}}

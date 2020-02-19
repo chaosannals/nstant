@@ -1,0 +1,27 @@
+{{extend './layout.art'}}
+{{block 'title'}}面板{{/block}}
+
+{{block 'style'}}
+<link rel="stylesheet" type="text/css" href="/panel.css" />
+{{/block}}
+
+{{block 'content'}}
+<div class="panel-area">
+    <div class="output-area">
+    </div>
+    <div class="input-area">
+        <div class="form">
+            <div>
+                <textarea name="content"></textarea>
+            </div>
+            <div>
+                <button type="submit">发送</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}
+
+{{block 'script'}}
+<script type="text/javascript" src="/panel.js" charset="utf-8"></script>
+{{/block}}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>{{block 'title'}}Nstant{{/block}}</title>
+    <link rel="icon" href="favicon.ico"/>
+    {{block 'style-base'}}
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+    {{/block}}
+    {{block 'style'}}{{/block}}
+</head>
+<body>
+    {{block 'content'}}{{/block}}
+    {{block 'script-base'}}
+    <script type="text/javascript" src="/common.js" charset="utf-8"></script>
+    {{/block}}
+    {{block 'script'}}{{/block}}
+</body>
+</html>

@@ -1,0 +1,9 @@
+.login.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    position: relative;
+}
