@@ -169,3 +169,13 @@ function listenSubmit(element, resolve, reject) {
         post(e.target.action, data, resolve, reject);
     });
 }
+
+function showMessage(text) {
+    var box = document.createElement('div');
+    box.className = 'message-box hidden';
+    box.innerHTML = text;
+    document.body.appendChild(box);
+    setTimeout(function () {
+        document.body.removeChild(box);
+    }, 2000);
+}

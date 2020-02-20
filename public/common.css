@@ -5,3 +5,21 @@ html, body, .page {
     margin: 0;
     padding: 0;
 }
+
+.message-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 1;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 0 0 6px 6px #0002;
+    opacity: 1;
+    transition: all 2s ease;
+}
+.message-box.hidden {
+    opacity: 1;
+}

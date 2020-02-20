@@ -24,8 +24,10 @@ function readFormData(body) {
     let data = {};
     let items = body.split(/------.+?\r\n/).filter(i => i);
     for (let item of items) {
-        let m = item.match(/name=\"(.+?)\"\s*(?:\r\n)+(.+?)\r\n/);
-        data[m[1]] = m[2];
+        let m = item.match(/name=\"(.+?)\"\s*(?:\r\n)+(.+?)?\r\n/);
+        if (m) {
+            data[m[1]] = m[2] || null;
+        }
     }
     return data;
 }

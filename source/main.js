@@ -1,4 +1,5 @@
 import 'colors';
+import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
 import serve from 'koa-static';
@@ -10,6 +11,10 @@ dotenv.config();
 app.use(serve(path.resolve('public')));
 app.use(request);
 app.use(route);
+
+if (!fs.existsSync('./data/user.db')) {
+    import('./source/script/initdb.js');
+}
 
 const host = `http://localhost:${process.env.SERVER_PORT}`;
 console.log(`index: ${host}`.green);
