@@ -22,7 +22,7 @@ if (!fs.existsSync('./data/user.db')) {
 
 const port = process.env.SERVER_PORT || 80;
 const host = `http://localhost:${port}`;
-console.log(`index: ${host}`.green);
-console.log(`login: ${host}/login`.green);
+console.log(`[index] => ${host}`.green);
+console.log(`[login] => ${host}/login`.green);
 
 app.listen(port);

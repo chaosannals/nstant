@@ -15,8 +15,10 @@ ws.onopen = function () {
 ws.onmessage = function (m) {
     var content = JSON.parse(m.data);
     var p = document.createElement('p');
+    p.className = 'another';
     p.innerText = content.user + ':' + content.message;
     output.appendChild(p);
+    output.scrollTo(0, output.scrollHeight);
 }
 
 ws.onclose = function () {
@@ -25,8 +27,18 @@ ws.onclose = function () {
 
 submitButton.addEventListener('click', function () {
     if (ws.readyState != 1) return;
-    console.log('click', ws.readyState);
+    var message = textarea.value;
+    textarea.disabled = true;
+    submitButton.disabled = true;
     ws.send(JSON.stringify({
-        message: textarea.value
+        message: message
     }));
+    var p = document.createElement('p');
+    p.className = 'myself';
+    p.innerText = message;
+    output.appendChild(p);
+    textarea.value = '';
+    textarea.disabled = false
+    submitButton.disabled = false;
+    output.scrollTo(0, output.scrollHeight);
 });

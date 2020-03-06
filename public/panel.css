@@ -20,10 +20,15 @@
     width: 800px;
     height: 200px;
 }
+
 .input-area textarea {
     box-sizing: border-box;
     width: 100%;
     height: 170px;
     resize: none;
     border: 1px solid #0002;
+}
+
+p.myself {
+    text-align: right;
 }

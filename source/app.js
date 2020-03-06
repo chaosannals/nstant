@@ -12,7 +12,7 @@ app.ws.use((context, next) => {
             for (var s of app.ws.server.clients) {
                 if (context.websocket != s) {
                     s.send(JSON.stringify({
-                        user: u && u.username,
+                        user: u && u.user && u.user.username,
                         message: JSON.parse(m).message
                     }));
                 }

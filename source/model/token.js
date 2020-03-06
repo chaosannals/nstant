@@ -1,7 +1,7 @@
 import Datastore from '../basic/data.js';
 
 const data = new Datastore({
-    inMemoryOnly: true,
+    filename: "data/token.db",
     autoload: true
 });
 

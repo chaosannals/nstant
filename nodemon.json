@@ -1,5 +1,9 @@
 {
+    "“watch": [
+        "source/"
+    ],
     "ignore": [
         "public/*"
-    ]
+    ],
+    "verbose": true
 }
