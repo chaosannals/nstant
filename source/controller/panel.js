@@ -1,4 +1,4 @@
-import { render } from '../response.js';
+import { render } from '../basic/response.js';
 
 export default class PanelController {
     /**

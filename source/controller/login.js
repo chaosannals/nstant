@@ -2,7 +2,7 @@ import uuidv1 from 'uuid/v1.js';
 import sha256 from 'crypto-js/sha256.js';
 import user from '../model/user.js';
 import token from '../model/token.js';
-import { render, respond, redirect } from '../response.js';
+import { render, respond, redirect } from '../basic/response.js';
 
 /**
  * 

@@ -1,4 +1,4 @@
-import { redirect } from '../response.js';
+import { redirect } from '../basic/response.js';
 
 export default class IndexController {
     /**
