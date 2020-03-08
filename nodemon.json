@@ -1,5 +1,5 @@
 {
-    "“watch": [
+    "watch": [
         "source/"
     ],
     "ignore": [
