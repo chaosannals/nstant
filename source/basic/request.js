@@ -32,6 +32,28 @@ function readFormData(body) {
     return data;
 }
 
+/**
+ * 读取简单信息。
+ * 
+ */
+function readSimpleData(body) {
+    let data = {};
+    let items = body.split('&');
+    for (let item of items) {
+        let pair = item.split('=');
+        let key = pair[0];
+        let value = pair[1];
+        if (key.indexOf('[]') >= 0) {
+            if (!Array.isArray(data[key])) {
+                data[key] = [];
+            }
+            data[key].push(value);
+        } else {
+            data[key] = value;
+        }
+    }
+}
+
 export default async (context, next) => {
     let type = context.request.type;
     let body = await readRequestBody(context);
@@ -41,7 +63,7 @@ export default async (context, next) => {
     } else if (/json/i.test(type)) {
         context.request.data = JSON.parse(body);
     } else {
-
+        context.request.data = readSimpleData(body);
     }
     await next();
 };
